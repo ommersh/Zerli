@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="usersHomeWindows.UserHomeWindowGuiController">
+   <children>
+      <ImageView fitHeight="695.0" fitWidth="1200.0" opacity="0.5">
+         <image>
+            <Image url="@../backround/fullBackground.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="249.0" layoutY="104.0" prefHeight="65.0" prefWidth="702.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="innerPane" layoutX="176.0" layoutY="267.0" prefHeight="337.0" prefWidth="850.0" />
+      <Label fx:id="accountStatusLabel" alignment="CENTER" layoutX="308.0" layoutY="176.0" prefHeight="47.0" prefWidth="587.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

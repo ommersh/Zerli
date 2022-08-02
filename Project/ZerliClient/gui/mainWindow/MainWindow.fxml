@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="mainWindowRoot" maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #d5dbdb;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainWindow.MainWindowController">
+   <children>
+      <GridPane fx:id="TopMenu" alignment="CENTER" prefHeight="105.0" style="-fx-background-color: #85d9dc; -fx-border-color: black;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <VBox fx:id="topMenuCell0" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox fx:id="topMenuCell1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" />
+            <VBox fx:id="topMenuCell2" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" />
+            <VBox fx:id="topMenuCell3" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" />
+            <VBox fx:id="topMenuCell4" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" />
+            <VBox fx:id="topMenuCell5" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5" />
+            <VBox fx:id="topMenuCell6" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6" />
+            <VBox fx:id="topMenuCell7" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="7" />
+         </children>
+      </GridPane>
+      <Pane prefHeight="695.0" prefWidth="1200.0">
+         <children>
+            <ImageView fitHeight="695.0" fitWidth="1200.0" opacity="0.5">
+               <image>
+                  <Image url="@../backround/fullBackground.jpg" />
+               </image>
+            </ImageView>
+            <VBox fx:id="bottomBox" prefHeight="695.0" prefWidth="1200.0" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

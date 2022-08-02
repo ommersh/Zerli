@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderApprovePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="branchManager.ManagerApproveController">
+   <children>
+      <Label layoutX="510.0" layoutY="58.0" text="Approve orders">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="managerOrderTable" layoutX="36.0" layoutY="137.0" prefHeight="449.0" prefWidth="1128.0">
+        <columns>
+          <TableColumn fx:id="orderNumCol" prefWidth="100.0" text="Order Number" />
+            <TableColumn fx:id="orderUserCol" prefWidth="93.0" text="Username" />
+          <TableColumn fx:id="orderDateCol" prefWidth="100.0" text="Order date" />
+            <TableColumn fx:id="orderArrivalCol" prefWidth="100.0" text="Arrival date" />
+            <TableColumn fx:id="orderDeliveryCol" prefWidth="100.0" text="Delivery" />
+            <TableColumn fx:id="orderPriceCol" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="orderLetterCol" prefWidth="275.0" text="Personal letter" />
+            <TableColumn fx:id="statusCol" prefWidth="259.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button fx:id="managerSelectedBot" layoutX="485.0" layoutY="606.0" mnemonicParsing="false" onAction="#GoToSelectedOrderWindow" prefHeight="57.0" prefWidth="232.0" style="-fx-background-color: #2f41a7;" text="Procceed with selected item" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="101.0" layoutY="94.0" prefHeight="25.0" prefWidth="286.0" text="Error - order is not eligible for approval" textFill="RED" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="guidanceLabel" layoutX="101.0" layoutY="112.0" prefHeight="20.0" prefWidth="243.0" text="Please select a diffrent order" textFill="RED" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="managerWatchReportPane" prefHeight="695.0" prefWidth="1200.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="branchManager.ManagerWatchReportController">
+   <children>
+      <AnchorPane prefHeight="695.0" prefWidth="275.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="22.0" layoutY="102.0" text="choose report date">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="27.0" text="choose report type">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="managerReportYear" layoutX="34.0" layoutY="129.0" prefWidth="150.0" promptText="year" />
+            <ComboBox fx:id="managerReportMonth" layoutX="34.0" layoutY="172.0" prefWidth="150.0" promptText="month" />
+            <ComboBox fx:id="managerReportType" layoutX="31.0" layoutY="64.0" prefWidth="150.0" promptText="report type" />
+            <Label fx:id="reportMessage" alignment="CENTER" layoutX="19.0" layoutY="620.0" prefHeight="40.0" prefWidth="224.0" text="Repost doesn't exist" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font></Label>
+            <Button fx:id="managerGetReport" contentDisplay="TOP" layoutX="34.0" layoutY="348.0" mnemonicParsing="false" onAction="#getReport" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Get report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/get.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="managerOpenReport" contentDisplay="TOP" disable="true" layoutX="34.0" layoutY="416.0" mnemonicParsing="false" onAction="#openReport" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Open report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView disable="true">
+                     <image>
+                        <Image url="@../icons/openDocument.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="278.0" layoutY="4.0" prefHeight="689.0" prefWidth="922.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="3.0">
+         <content>
+            <AnchorPane fx:id="reportPane" prefHeight="689.0" prefWidth="903.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

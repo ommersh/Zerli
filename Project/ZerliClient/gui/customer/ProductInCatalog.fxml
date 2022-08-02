@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="basePane" prefHeight="100.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.ProductGuiController">
+   <children>
+      <AnchorPane fx:id="imagePane" prefHeight="100.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="58.0" layoutX="21.0" layoutY="22.0">
+               <image>
+                  <Image url="@../icons/potted-plant-black.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <VBox fx:id="textPane" prefHeight="100.0" prefWidth="500.0">
+         <children>
+            <Label fx:id="flowerNAme" prefHeight="17.0" prefWidth="500.0" text="FlowerName">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="FlowerDescription" prefHeight="17.0" prefWidth="500.0" text="Flower description">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="pricePane" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <padding>
+            <Insets left="10.0" right="10.0" top="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="priceLabel" prefHeight="17.0" prefWidth="100.0" text="price">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Text fx:id="oldPriceText" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="old Price" wrappingWidth="65.13671875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="btnsPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="amount" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="38.0" />
+            <Button fx:id="addToCartBtn" contentDisplay="TOP" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #2f41a7;" text="Add to cart" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="addToProductBtn" contentDisplay="TOP" layoutX="75.0" layoutY="59.0" mnemonicParsing="false" onAction="#addToProduct" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #2f41a7;" text="Add to your product" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

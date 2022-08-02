@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PromotionWindow.CreatePromotionWindowController">
+   <children>
+      <TextField fx:id="ItemID" layoutX="244.0" layoutY="259.0" />
+      <Text layoutX="89.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter ItemID : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Discount" layoutX="244.0" layoutY="326.0" />
+      <Text layoutX="89.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Discount :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="89.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Promotion Text :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="createbutton" layoutX="1117.0" layoutY="641.0" mnemonicParsing="false" onAction="#createButtonPressed" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: #2f41a7;" text="Create" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Button fx:id="cancelbutton" layoutX="14.0" layoutY="641.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: #2f41a7;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Text layoutX="471.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create new Promotion ">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="errorLabel" layoutX="203.0" layoutY="594.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Text layoutX="395.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="17.8203125">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="PromotionTxt" layoutX="244.0" layoutY="421.0" prefHeight="123.0" prefWidth="352.0" />
+   </children>
+</AnchorPane>

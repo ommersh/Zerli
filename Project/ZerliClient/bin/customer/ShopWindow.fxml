@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.ShopWindowController">
+   <children>
+      <TabPane fx:id="catalogTabPane" prefWidth="900.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="birthdayFlowersTab" onSelectionChanged="#selectCategoryTab" text="Birthday Flowers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="birthdayFlowerBase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab fx:id="weddingFlowersTab" onSelectionChanged="#selectCategoryTab" text="Wedding Flowers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="weddingFlowersbase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="AnniversaryFlowersTab" onSelectionChanged="#selectCategoryTab" text="Anniversary Flowwers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="-1.0" prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="anniversaryFlowersBase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="congratulationFlowersTab" onSelectionChanged="#selectCategoryTab" text="Congratulation Flowwers ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="congratulationFlowersBase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="babyFlowersTab" onSelectionChanged="#selectCategoryTab" text="New Baby Flowers          ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="newBabyFlowersBase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="singleItemsTab" onSelectionChanged="#selectCategoryTab" text="Single Items">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="664.0" prefWidth="900.0">
+                           <content>
+                              <VBox fx:id="singleItemsBase" prefWidth="900.0" />
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <VBox fx:id="cartPane" prefWidth="300.0">
+         <children>
+            <TabPane fx:id="cartTabPane" prefHeight="695.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="cartTab" onSelectionChanged="#selectCartTab" text="     Cart     ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="667.0" prefWidth="300.0">
+                                 <children>
+                                    <AnchorPane prefHeight="95.0" prefWidth="300.0">
+                                       <children>
+                                          <Label fx:id="cartLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="55.0" text="My Cart" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold Italic" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="483.0" prefWidth="300.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" layoutX="10.0" prefHeight="450.0" prefWidth="280.0">
+                                             <content>
+                                                <VBox fx:id="cartItemsList" prefHeight="450.0" prefWidth="280.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="placeOrderBtn" layoutX="81.0" layoutY="43.0" mnemonicParsing="false" onAction="#PalceOrder" prefHeight="41.0" prefWidth="138.0" style="-fx-background-color: #2f41a7;" text="Place Order" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold Italic" size="12.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="33.0" fitWidth="30.0">
+                                                   <image>
+                                                      <Image url="@../icons/spring.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Label fx:id="cartErrorLabel" layoutX="30.0" layoutY="9.0" prefHeight="17.0" prefWidth="250.0" textFill="RED">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="CustomizedProductTab" onSelectionChanged="#selectCartTab" text="Customized Products">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <AnchorPane prefHeight="80.0" prefWidth="300.0">
+                                 <children>
+                                    <Button fx:id="newCostumizedProduct" contentDisplay="TOP" layoutX="176.0" layoutY="32.0" mnemonicParsing="false" onAction="#createNewCustomizedProduct" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #2f41a7;" text="New Product" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="141.0" text="Choose Product to edit">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="185.0" layoutY="6.0" prefHeight="17.0" prefWidth="93.0" text="Create new one">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="costumizedProductsChooseList" layoutX="10.0" layoutY="32.0" onAction="#customizedProductSelected" prefHeight="35.0" prefWidth="150.0" promptText="choose product" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="63.0" prefWidth="300.0">
+                                 <children>
+                                    <TextField fx:id="costumizedItemName" layoutX="64.0" layoutY="17.0" promptText="item name">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="524.0" prefWidth="300.0">
+                                 <children>
+                                    <Button fx:id="addCPtoCart" contentDisplay="TOP" layoutX="172.0" layoutY="475.0" mnemonicParsing="false" onAction="#addCPToCart" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #2f41a7;" text="Add to cart" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="saveChangeBtn" contentDisplay="TOP" layoutX="32.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveChnages" prefHeight="35.0" prefWidth="110.0" style="-fx-background-color: #2f41a7;" text="Save changes" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <ScrollPane hbarPolicy="NEVER" layoutX="10.0" prefHeight="297.0" prefWidth="280.0">
+                                       <content>
+                                          <VBox fx:id="costumizedProductItemList" prefHeight="294.0" prefWidth="268.0" />
+                                       </content>
+                                    </ScrollPane>
+                                    <ComboBox fx:id="itemPriceRange" layoutX="155.0" layoutY="317.0" onAction="#changeItemPrice" prefHeight="25.0" prefWidth="124.0" promptText="price range" />
+                                    <Label layoutX="21.0" layoutY="319.0" text="Choose price range:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="67.0" layoutY="354.0" text="Choose type:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="64.0" layoutY="391.0" text="Choose color:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="itemType" layoutX="155.0" layoutY="352.0" onAction="#changeItemType" prefHeight="25.0" prefWidth="124.0" promptText="type" />
+                                    <ComboBox fx:id="itemColor" layoutX="155.0" layoutY="388.0" onAction="#changeItemColor" prefHeight="25.0" prefWidth="124.0" promptText="color" />
+                                    <Label fx:id="customizedProductErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="32.0" layoutY="421.0" prefHeight="48.0" prefWidth="250.0" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children></VBox>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="orderReportPane" prefHeight="1188.0" prefWidth="840.0" style="-fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reportGUI.OrderReportController">
+   <children>
+      <Label layoutX="38.0" layoutY="29.0" text="Orders Report:">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="branchLabel" layoutX="38.0" layoutY="64.0" text="Branchname branch">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabel" layoutX="38.0" layoutY="91.0" text="month/year-month/year">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="167.0" text="Number of orders:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="221.0" text="Average orders per month:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="194.0" text="Most popular item:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderNumLabel" layoutX="201.0" layoutY="167.0" text="noData">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="popularItemLabel" layoutX="201.0" layoutY="194.0" text="noData">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="averageOrdersMonthLabel" layoutX="270.0" layoutY="221.0" text="noData">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="ordersPerDayChart" layoutX="170.0" layoutY="311.0" style="-fx-border-color: black;" title="Orders per day">
+        <xAxis>
+          <CategoryAxis fx:id="dayAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="ordersNumAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <PieChart fx:id="ordersPerCategoryChart" layoutX="170.0" layoutY="732.0" style="-fx-border-color: black;" title="Orders per category" />
+   </children>
+</AnchorPane>

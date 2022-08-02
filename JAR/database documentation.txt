@@ -1,0 +1,187 @@
+what we have in the database:
+catalog:
+	a few product on each category in the products table
+
+survey: 
+	a survey
+
+complaints:
+	a few complaints(for the reports mostly)
+
+promotion:
+	nothing
+
+order:
+	orders(for the reports mostly)
+
+report:
+	the last month reports, this month reports, quarter 2 reports
+
+
+users managment system data:
+HallelWeil	7891011	BranchManager		0	hallel		weil	hallel@gmail.com	054123456	200000000	Active	Braude
+OfirGalai	223344	BranchEmployee		0	ofir		galai	ofir@gmail.com		051444888	300000000	Active	Braude
+Omersh		1234567	CEO			0	Omer		shamir	ommersh@gmail.comCEO	0545970626	314763970	Active	Braude
+Omershami	667788	Courier			0	omerr		shami	om@gmail.com		056670000	600000000	Active	Braude
+OrBalmas	123456	NonAuthorizedCustomer	0	or		balmas	or@gmail.com		0569999917	100000000	NotActive	 
+RonenZeyan	778899	CustomerServiceEmloyee	0	ronen		zeyan	ronen@gmail.com		0505813931	4000000000	Active	Braude
+WorkHallel	112233	MarketingEmployee	0	hallelll	wiel	hallel2@gmail.com	0508889976	500000000	Active	Braude
+
+
+
+the database:
+
+
+table name: branch 
+branchName   VARCHAR(45)  - the branch name
+phoneNumber  VARCHAR(45)  - the branch's phone number
+
+table name: complaint
+complaintNumber 		INT		- the complaint unique number
+responsibleEmployeeUsername	VARCHAR(45)	- the responsible employee username
+complaint			VARCHAR(200)	- the complaint description
+answer				VARCHAR(200)	- the answer to the complaint
+compensation			DOUBLE		- the compensation amount
+status				VARCHAR(45)	- the complaint status(Active\completed)
+customerID			VARCHAR(15)	- the customer id 
+creationTime			TIMESTAMP	- the complaint creation time
+
+table name: creditdetails
+username			VARCHAR(45)	- the user name
+cardInfo			VARCHAR(45)	- the card infoe as a string
+
+table name: deliverydetails
+orderNumber			VARCHAR(45)	- the order number
+firstName			VARCHAR(45)	- the receiver first name
+lastName			VARCHAR(45)	- the receiver last name
+address				VARCHAR(200)	- the receiver address
+phoneNumber			VARCHAR(45)	- the receiver phone number(optional)
+comments			VARCHAR(45)	- additional comments
+
+table name: order
+orderNumber			INT		- the order unique number automatic
+orderDate			TIMESTAMP	- the order date
+arrivalDate			TIMESTAMP	- the wanted delivery\pickup time
+homeDelivery			TINYINT		- is the order with home delivery?
+branchName			VARCHAR(45)	- the order is from this branch
+price				DOUBLE		- the order price
+customerID			VARCHAR(45)	- the customer username
+personalLetter			VARCHAR(200)	- personal letter(optional)
+orderStatus			VARCHAR(45)	- the order status
+data				VARCHAR(100)	- additional data(optional)
+
+table name: product
+productID			INT		- the product unique number(automatic)
+name				VARCHAR(45)	- the product name
+price				DOUBLE		- the product current active price
+description			VARCHAR(200)	- the product description
+colors				VARCHAR(45)	- the product main colors
+image				BLOB		- the product image
+category			VARCHAR(45)	- the product category
+oldPrice			DOUBLE		- if the produc is on sale -> save the original price
+
+table name: productinorder
+orderNumber			INT		- the order number
+name				VARCHAR(100)	- the product name
+price				DOUBLE		- the product prive
+amount				INT		- the amount in order
+category			VARCHAR(45)	- the product category
+data				VARCHAR(200)	- additional data
+
+table name: promotion
+promotionID			INT		- the promotion unique number(automatic)
+productID			INT		- the product on promotion
+discount			DOUBLE		- the discount % as number from 1(100% off) to 0(original price)
+promotionText			VARCHAR(200)	- the promotion description
+creationDate			TIMESTAMP	- the creation time
+status				VARCHAR(45)	- the promotion status(active\cancelled)
+
+table name: report
+branchName			VARCHAR(45)	- the branch name, "ALL" for global reports
+type				VARCHAR(45)	- the report type
+year				INT		- the report year
+month				INT		- the report month-for monthly, quarter for quarterly
+data				BLOB
+
+table name: shopcredit
+customerID			VARCHAR(15)	- the customer id number
+credit				DOUBLE		- the available credit amount
+
+table name: survey
+q1				VARCHAR(120)	- the questions
+q2				VARCHAR(120)	- the questions
+q3				VARCHAR(120)	- the questions
+q4				VARCHAR(120)	- the questions
+q5				VARCHAR(120)	- the questions
+q6				VARCHAR(120)	- the questions
+a1				INT		- the answers sum
+a2				INT		- the answers sum
+a3				INT		- the answers sum
+a4				INT		- the answers sum
+a5				INT		- the answers sum
+a6				INT		- the answers sum
+participants			INT		- the number of participants
+surveyResult			MEDIUMBLOB	- the survey result file
+
+table name: users
+username			VARCHAR(45)	- the username
+password			VARCHAR(45)	- the password
+userType			VARCHAR(45)	- the user type
+connected			TINYINT		- is the user alredy connected?
+firstName			VARCHAR(45)	- the user's first name
+lastName			VARCHAR(45)	- the user's last name
+email				VARCHAR(45)	- the user's email
+phoneNumber			VARCHAR(45)	- the user's phone number
+personID			VARCHAR(45)	- the user's id
+status				VARCHAR(45)	- the account status
+branch				VARCHAR(45)	- the employee branch(optional)
+
+
+
+the users managment system:
+1 table for users data:
+table name: users
+username			VARCHAR(45)	- the username
+password			VARCHAR(45)	- the password
+email				VARCHAR(45)	- the user's email
+userType			VARCHAR(45)	- the user type
+phone				VARCHAR(45)	- the user's phone number
+firstname			VARCHAR(45)	- the user's first name
+lastname			VARCHAR(45)	- the user's last name
+branch				VARCHAR(45)	- the employee branch(optional)
+personID			VARCHAR(45)	- the user's id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

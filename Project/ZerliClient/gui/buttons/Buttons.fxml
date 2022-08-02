@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="848.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buttons.BtnController">
+   <children>
+      <Button fx:id="infoBtn" contentDisplay="TOP" layoutX="210.0" layoutY="21.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="41.0">
+               <image>
+                  <Image url="@../icons/information.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="shopBtn" contentDisplay="TOP" layoutX="308.0" layoutY="21.0" mnemonicParsing="false" onAction="#openShop" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Shop" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="48.0">
+               <image>
+                  <Image url="@../icons/shopping-cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="accessibilityBtn" contentDisplay="TOP" layoutX="402.0" layoutY="21.0" mnemonicParsing="false" onAction="#accessibility" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Accessibility" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="47.0">
+               <image>
+                  <Image url="@../icons/assistive-technology.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="logoutBtn" contentDisplay="TOP" layoutX="496.0" layoutY="21.0" mnemonicParsing="false" onAction="#logout" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="43.0">
+               <image>
+                  <Image url="@../icons/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="loginBtn" contentDisplay="TOP" layoutX="590.0" layoutY="21.0" mnemonicParsing="false" onAction="#login" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="43.0">
+               <image>
+                  <Image url="@../icons/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="homeBtn" contentDisplay="TOP" layoutX="685.0" layoutY="21.0" mnemonicParsing="false" onAction="#goToHomepage" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../icons/home-page.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="orderHistoryBtn" contentDisplay="TOP" layoutX="107.0" layoutY="21.0" mnemonicParsing="false" onAction="#openOrdersHistory" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Order history" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="48.0">
+               <image>
+                  <Image url="@../icons/order-history.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="reportsBtn" contentDisplay="TOP" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#openReports" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="46.0">
+               <image>
+                  <Image url="@../icons/profit-report.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="createComplaintBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="46.0" layoutY="105.0" mnemonicParsing="false" onAction="#createComplaint" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Create complaint" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="43.0">
+               <image>
+                  <Image url="@../icons/complaint.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="updateComplaintBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="139.0" layoutY="105.0" mnemonicParsing="false" onAction="#updateComplaint" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Manage complaints" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="40.0">
+               <image>
+                  <Image url="@../icons/submit-resume.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="viewSurveyBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="230.0" layoutY="105.0" mnemonicParsing="false" onAction="#viewSurvey" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="View survey" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="46.0">
+               <image>
+                  <Image url="@../icons/survey.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="createPromotionBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="237.0" layoutY="178.0" mnemonicParsing="false" onAction="#createPromotion" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Create promotion" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="44.0">
+               <image>
+                  <Image url="@../icons/commercial.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="enterSurveyAnswersBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="146.0" layoutY="178.0" mnemonicParsing="false" onAction="#surveyAnswers" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Surrvey answers" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="44.0">
+               <image>
+                  <Image url="@../icons/survey.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="enterSurveyresultBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="46.0" layoutY="178.0" mnemonicParsing="false" onAction="#surveyResult" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Manage surveys" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="42.0">
+               <image>
+                  <Image url="@../icons/overview.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="manageUsersBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="249.0" layoutY="259.0" mnemonicParsing="false" onAction="#manageUsers" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Users" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="54.0">
+               <image>
+                  <Image url="@../icons/client-management.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="viewOrdersBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="146.0" layoutY="259.0" mnemonicParsing="false" onAction="#manageOrders" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Orders" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="51.0">
+               <image>
+                  <Image url="@../icons/empty-box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="approveDeliveryBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="40.0" layoutY="259.0" mnemonicParsing="false" onAction="#approvedelivery" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Approve delivery" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="44.0">
+               <image>
+                  <Image url="@../icons/receipt-approved.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="userHomeBtn" contentDisplay="TOP" layoutX="327.0" layoutY="105.0" mnemonicParsing="false" onAction="#goToUserHomepage" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Home" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../icons/home-page.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fx:id="logo" fitHeight="64.0" fitWidth="142.0" layoutX="398.0" layoutY="200.0" onMouseClicked="#logoBtnPress">
+         <image>
+            <Image url="@../icons/logo.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="managePromotionsBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="40.0" layoutY="336.0" mnemonicParsing="false" onAction="#managePromotions" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Manage promotions" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="35.0">
+               <image>
+                  <Image url="@../icons/discount_history.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="manageCatalogBtn" contentDisplay="TOP" graphicTextGap="0.0" layoutX="139.0" layoutY="336.0" mnemonicParsing="false" onAction="#manageCatalog" prefHeight="63.0" prefWidth="78.0" style="-fx-background-color: #2f41a7;" text="Manage catalog" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="44.0">
+               <image>
+                  <Image url="@../icons/flower-bouquet.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

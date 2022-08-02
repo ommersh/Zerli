@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordersPayment.ConfirmOrderWindowController">
+   <children>
+      <Label layoutX="481.0" layoutY="26.0" text="Confirm order details:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="61.0" layoutY="114.0" prefHeight="350.0" prefWidth="291.0">
+         <columns>
+            <TableColumn fx:id="tableviewItemname" prefWidth="75.0" text="item name:" />
+            <TableColumn fx:id="tableviewamount" prefWidth="58.0" text="amount:" />
+            <TableColumn fx:id="tableviewprice" prefWidth="57.0" text="price:" />
+            <TableColumn fx:id="tableviewtotal" prefWidth="110.0" text="total:" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="dipslaydeliverydetails" disable="true" editable="false" layoutX="443.0" layoutY="114.0" prefHeight="350.0" prefWidth="282.0" text="&#10;" />
+      <TextArea fx:id="displayGreetingcard" disable="true" editable="false" layoutX="815.0" layoutY="114.0" prefHeight="350.0" prefWidth="320.0" text="&#10;" />
+      <Label layoutX="173.0" layoutY="77.0" text="items:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="77.0" text="Delivery details:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="918.0" layoutY="77.0" text="Greeting Card:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="473.0" text="Total Cost:">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="TotalPrice" layoutX="173.0" layoutY="473.0" text="0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="checkboxSendGift" layoutX="63.0" layoutY="577.0" mnemonicParsing="false" onAction="#sendAsGift" text="Send as a gift" />
+      <CheckBox fx:id="checkboxsendMail" layoutX="62.0" layoutY="606.0" mnemonicParsing="false" onAction="#SendReceiptToEmail" text="Send receipt to my Email address" />
+      <Button fx:id="confirmandpaybutton" contentDisplay="RIGHT" layoutX="1048.0" layoutY="640.0" mnemonicParsing="false" onAction="#confirmPayButtpress" prefHeight="40.0" prefWidth="138.0" style="-fx-background-color: #2f41a7;" text="Confirm and pay" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Button fx:id="backbutton" layoutX="17.0" layoutY="640.0" mnemonicParsing="false" onAction="#backbuttpress" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: #2f41a7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Text fx:id="oldPriceTxt" layoutX="251.0" layoutY="493.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="old price" wrappingWidth="101.0">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Label fx:id="orderDataLabel" alignment="TOP_LEFT" layoutX="61.0" layoutY="503.0" prefHeight="74.0" prefWidth="335.0" text="Label">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

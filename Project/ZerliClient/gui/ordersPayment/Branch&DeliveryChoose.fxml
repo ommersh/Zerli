@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ordersPayment.BranchDeliveryChooseWindowController">
+   <children>
+      <CheckBox fx:id="GreetingCardChoosen" layoutX="543.0" layoutY="459.0" mnemonicParsing="false" text="Add gretting card">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="chooseButton" layoutX="1118.0" layoutY="638.0" mnemonicParsing="false" onAction="#chooseButtonPressed" prefHeight="40.0" prefWidth="68.0" style="-fx-background-color: #2f41a7;" text="Choose" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <RadioButton fx:id="storePickupToggle" layoutX="543.0" layoutY="193.0" mnemonicParsing="false" onAction="#storPickupChoose" selected="true" text="Store Pickup">
+         <toggleGroup>
+            <ToggleGroup fx:id="DeliveryOption" />
+         </toggleGroup>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="638.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="40.0" prefWidth="68.0" style="-fx-background-color: #2f41a7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <RadioButton fx:id="homeDeliverytoggle" layoutX="541.0" layoutY="320.0" mnemonicParsing="false" onAction="#HomeDeliveryChoose" text="Home Delivery (18)" toggleGroup="$DeliveryOption">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <Text layoutX="511.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Delivery Option ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="546.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Branch ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="BranchChosen" layoutX="543.0" layoutY="401.0" prefWidth="150.0" promptText="Choose Branch" />
+      <Label fx:id="ErrorText" layoutX="548.0" layoutY="565.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Text layoutX="388.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Delivery Options &amp; Add Personal Card">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="StorePickupDate" layoutX="472.0" layoutY="258.0" />
+      <Text layoutX="472.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Pickup Date">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="pickupHour" layoutX="666.0" layoutY="259.0" prefHeight="25.0" prefWidth="68.0" />
+      <ComboBox fx:id="minPickup" layoutX="747.0" layoutY="258.0" prefHeight="25.0" prefWidth="68.0" />
+      <Text layoutX="666.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour ">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="747.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

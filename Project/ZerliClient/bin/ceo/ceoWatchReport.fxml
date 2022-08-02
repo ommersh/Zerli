@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ceoWatchReportPane" prefHeight="695.0" prefWidth="1200.0" style="-fx-background-color: white; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ceo.CEOcontroller">
+   <children>
+      <AnchorPane prefHeight="695.0" prefWidth="275.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="17.0" layoutY="105.0" text="choose report date">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="23.0" text="choose report type">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ceoReportYear" layoutX="29.0" layoutY="132.0" prefWidth="150.0" promptText="year" visibleRowCount="5" />
+            <ComboBox fx:id="ceoReportMonth" disable="true" layoutX="29.0" layoutY="175.0" prefWidth="150.0" promptText="month" visibleRowCount="12" />
+            <ComboBox fx:id="ceoReportType" layoutX="29.0" layoutY="60.0" onAction="#changeMonthChoice" prefWidth="150.0" promptText="report type" visibleRowCount="5" />
+            <Label fx:id="reportMessage" layoutX="30.0" layoutY="640.0" prefHeight="17.0" prefWidth="121.0" text="Repost doesn't exist" textFill="RED" visible="false" />
+            <Label layoutX="15.0" layoutY="218.0" text="choose branch">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ceoReportBranch" layoutX="29.0" layoutY="251.0" prefWidth="150.0" promptText="branch" visibleRowCount="5" />
+            <Button fx:id="getReportBot" contentDisplay="TOP" layoutX="26.0" layoutY="340.0" mnemonicParsing="false" onAction="#getReport" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Get report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/get.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="previewReportRightBot" contentDisplay="TOP" disable="true" layoutX="26.0" layoutY="410.0" mnemonicParsing="false" onAction="#previewReportRight" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Preview report on right" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="ceoPreviewReportRight">
+                     <image>
+                        <Image url="@../icons/Rpreview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="previewReportLeftBot" contentDisplay="TOP" disable="true" layoutX="26.0" layoutY="480.0" mnemonicParsing="false" onAction="#previewReportLeft" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Preview report on left" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/Lpreview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="openReportBot" contentDisplay="TOP" disable="true" layoutX="26.0" layoutY="550.0" mnemonicParsing="false" onAction="#openReport" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #2f41a7;" text="Open report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/openDocument.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ceoReportScreen" layoutX="275.0" layoutY="-1.0" prefHeight="699.0" prefWidth="998.0">
+         <children>
+            <ScrollPane prefHeight="695.0" prefWidth="455.0">
+               <content>
+                <AnchorPane fx:id="leftReport" prefHeight="696.0" prefWidth="464.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane layoutX="456.0" prefHeight="695.0" prefWidth="455.0">
+               <content>
+                  <AnchorPane fx:id="rightReport" pickOnBounds="false" prefHeight="696.0" prefWidth="464.0" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fx:id="middleScroll" layoutX="-1.0" layoutY="-1.0" prefHeight="706.0" prefWidth="914.0" visible="false">
+               <content>
+                  <AnchorPane fx:id="MiddleReport" prefHeight="706.0" prefWidth="931.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

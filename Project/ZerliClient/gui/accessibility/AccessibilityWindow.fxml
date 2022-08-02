@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="basePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accessibility.AccessibilityPageController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="76.0" prefHeight="59.0" prefWidth="780.0" text="Accessibility">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="226.0" prefHeight="59.0" prefWidth="780.0" text="Please contact us for phone support at">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="167.0" prefHeight="59.0" prefWidth="780.0" text="We want to help you!">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="285.0" prefHeight="59.0" prefWidth="780.0" text="04-0404044">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="344.0" prefHeight="59.0" prefWidth="780.0" text="Or send us a message on WhatsApp">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="392.0" prefHeight="59.0" prefWidth="780.0" text="054-0404444">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="210.0" layoutY="451.0" prefHeight="59.0" prefWidth="780.0" text="24/7">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
